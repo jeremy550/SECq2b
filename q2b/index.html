@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <script src="q2b.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    
+    function onSubmit(token) {
+     document.getElementById("form").submit();
+   }
+
+
+function reset(){
+  document.getElementById("form").reset();
+}
+</script>
+</head>
+<body>
+
+<h1>Create Account</h1>
+<form action="q2b.php" method="post" id="form">
+
+<h3>Username</h3><input type="text" id="email" name="email" size="80">
+<h3>Password</h3>
+<input type="password" id="password" name="password" size="80" height="100"><br><br> 
+<h3>Confirm Password</h3>
+<input type="password" id="confirm" name="confirm" size="80" height="100"><br></br>
+ 
+<button class="g-recaptcha" 
+        data-sitekey="6LdhFbUZAAAAAMRtWOSvsdQIsgOod_Q9XWSMjXRt" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+        
+        <input type="button" onclick="reset()" value="Reset">
+ 
+
+</form>
+
+
+</body>
+</html>
